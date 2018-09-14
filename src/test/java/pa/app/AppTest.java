@@ -27,23 +27,36 @@ public class AppTest
 		// Test concat example method
 		assertEquals("Hello world1!", res);
 	}	
-	@DisplayName("Second Test - concat")
+	@DisplayName("Second Test - addition")
 	@Test
-	void testConcat2() {
+	void testAddition() {
 		App ap = new App();
-		String res = ap.concat("Hello"," world2!");
-		// Test concat example method
-		assertEquals("Hello world2!", res);
+		
+		int res = ap.addition(2,2);
+		assertEquals(4, res);
 	}	
-	@DisplayName("Third Test - concat")
+	@DisplayName("Third Test - subtraction")
 	@Test
-	void testConcat3() {
+	void testSubtraction() {
 		App ap = new App();
-		String res = ap.concat("Hello"," world3!");
-		// Test concat example method
-		assertEquals("Hello world3!", res);
-	}	
-	@DisplayName("Fourth Test - main")
+		int res = ap.subtraction(4,2);
+		assertEquals(2, res);
+	}
+	@DisplayName("Fourth Test - multiplication")
+	@Test
+	void testMultiplication() {
+		App ap = new App();
+		int res = ap.multiplication(4,2);
+		assertEquals(8, res);
+	}
+	@DisplayName("Fifth Test - division")
+	@Test
+	void testDivision() {
+		App ap = new App();
+		int res = ap.division(4,2);
+		assertEquals(2, res);
+	}
+	@DisplayName("Sixth Test - main")
 	@Test
 	void testMain(){
 		App.main(null);
